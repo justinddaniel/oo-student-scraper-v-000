@@ -44,7 +44,7 @@ class Scraper
     shash[:profile_quote] = doc.css("div.profile-quote").text
     shash[:bio] = doc.css("p").text
     shash[:twitter] =doc.css(".social-icon-container a").first.attributes.first[1].value
-
   end
 
 end
+

@@ -17,10 +17,11 @@ class Scraper
     slocation.each do |l|
       locationsarray << l.text
     end
+    binding.pry
     ssites = doc.css(".student-card a")
     ssitesstring = ssites.to_s
     ssitesstring.scan(/students.(\w|-){1,100}.html/)
-    binding.pry
+    
     # namesarray, locationsarray, and sitesarray should all be arrays of equal
     #length. Now they can be combined into an array of hashes, where each array
     #index is a hash of :name => namesarray[i], :location => locationsarray[i], etc.

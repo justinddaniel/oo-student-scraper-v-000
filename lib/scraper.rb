@@ -30,6 +30,7 @@ class Scraper
       hash[:location] = locationsarray[i]
       hash[:profile_url] = sitesarray[i]
       i += 1
+      binding.pry 
     end
     sarray
   end

@@ -23,11 +23,11 @@ class Scraper
       sitesarray << s.attributes.first[1].value
     end
     binding.pry
-
-    # namesarray, locationsarray, and sitesarray should all be arrays of equal
-    #length. Now they can be combined into an array of hashes, where each array
-    #index is a hash of :name => namesarray[i], :location => locationsarray[i], etc.
-
+    x = sitesarray.length
+    sarray = Array.new(x, {})
+    i = 0
+    
+    
     # x = locationsarray.length
     #studentarray = [{}, x]
     # i = 0

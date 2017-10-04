@@ -17,7 +17,9 @@ class Scraper
     slocation.each do |l|
       locationsarray << l.text
     end
-    binding.pry
+    ssites = doc.css(".student-card a")
+    ssitesstring = ssites.to_s
+    
 
   end
 

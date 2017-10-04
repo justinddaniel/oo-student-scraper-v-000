@@ -20,7 +20,7 @@ class Scraper
     ssites = doc.css(".student-card a")
     ssitesstring = ssites.to_s
     ssitesstring.scan(/students.(\w|-){1,100}.html/)
-
+    binding.pry
 
   end
 

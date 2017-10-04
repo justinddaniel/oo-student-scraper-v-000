@@ -33,7 +33,6 @@ class Scraper
       i += 1
       hash
     end
-
     sarray
   end
 

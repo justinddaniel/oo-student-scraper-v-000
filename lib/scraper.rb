@@ -22,22 +22,16 @@ class Scraper
     ssites.each do |s|
       sitesarray << s.attributes.first[1].value
     end
-    binding.pry
     x = sitesarray.length
     sarray = Array.new(x, {})
     i = 0
-    
-    
-    # x = locationsarray.length
-    #studentarray = [{}, x]
-    # i = 0
-    #studentarray.each do |hash|
-    #hash[:name] = namesarray[i]
-    #hash[:location] = locationsarray[i]
-    #hash[:profile_url] = ssitesarray[i]
-    # i+= 1
-
-
+    sarray.each do |hash|
+      hash[:name] = namesarray[i]
+      hash[:location] = locationsarray[i]
+      hash[:profile_url] = sitesarray[i]
+      i += 1
+    end
+    sarray
   end
 
   def self.scrape_profile_page(profile_url)

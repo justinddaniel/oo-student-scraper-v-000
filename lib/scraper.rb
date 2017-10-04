@@ -12,6 +12,12 @@ class Scraper
     snames.each do |a|
       namesarray << a.text
     end
+    slocation = doc.css("p.student-location")
+    locationsarray = []
+    slocation.each do |l|
+      locationsarray << l.text
+    end
+    binding.pry
 
   end
 

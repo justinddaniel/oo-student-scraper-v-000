@@ -25,8 +25,6 @@ class Scraper
     x = sitesarray.length
     sarray = Array.new(x, " ")
     i = 0
-    binding.pry
-
     sarray.collect do |hash|
       hash = Hash.new
       hash[:name] = namesarray[i]

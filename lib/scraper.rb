@@ -41,10 +41,13 @@ class Scraper
     binding.pry
     # attributes needed: twitter url, linkedin url, github url, blog url, profile quote, and bio.
     shash = {}
+    shash[:twitter] = doc.css(".social-icon-container a").first.attributes.first[1].value
+    shash[:linkedin] = doc.css(".social-icon-container a")[1].attributes.first[1].value
+    shash[:github] = doc.css(".social-icon-container a")[2].attributes.first[1].value
+    shash[:blog] = doc.css(".social-icon-container a")[3].attributes.first[1].value
     shash[:profile_quote] = doc.css("div.profile-quote").text
     shash[:bio] = doc.css("p").text
-    shash[:twitter] =doc.css(".social-icon-container a").first.attributes.first[1].value
+    shash
   end
 
 end
-

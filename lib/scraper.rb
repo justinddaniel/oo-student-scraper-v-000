@@ -25,7 +25,7 @@ class Scraper
     x = sitesarray.length
     sarray = Array.new(x, " ")
     i = 0
-    sarray.collect do |hash| #returns modified array. Original array sarray not modified. 
+    sarray.collect do |hash| #returns modified array. Original array sarray not modified.
       hash = Hash.new
       hash[:name] = namesarray[i]
       hash[:location] = locationsarray[i]
@@ -36,6 +36,9 @@ class Scraper
   end
 
   def self.scrape_profile_page(profile_url)
+    html = open(profile_url)
+    doc = Nokogiri::HTML(html)
+    binding.pry
 
   end
 

@@ -42,7 +42,7 @@ class Scraper
     shash = {}
     links = doc.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
     links.each do |link|
-      if link.include?("linkedin")
+      if link.include?("linkedin") #the if statement allows it to handle cases where a profile page does not have the link. 
         shash[:linkedin] = link
       elsif link.include?("github")
         shash[:github] = link

@@ -40,7 +40,7 @@ class Scraper
     doc = Nokogiri::HTML(html)
     # attributes needed: twitter url, linkedin url, github url, blog url, profile quote, and bio.
     shash = {}
-    links = profile_page.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
+    links = doc.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
     links.each do |link|
       if link.include?("linkedin")
         shash[:linkedin] = link

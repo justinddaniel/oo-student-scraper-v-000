@@ -31,7 +31,7 @@ class Scraper
       hash[:location] = locationsarray[i]
       hash[:profile_url] = sitesarray[i]
       i += 1
-      hash
+      hash #this makes the return value of the loop the new hash. This line is necessary!
     end
   end
 

@@ -27,13 +27,13 @@ class Scraper
 
     # x = locationsarray.length
     #studentarray = [{}, x]
-    # i = 0  
+    # i = 0
     #studentarray.each do |hash|
     #hash[:name] = namesarray[i]
     #hash[:location] = locationsarray[i]
-    #...
+    #hash[:profile_url] = ssitesarray[i]
     # i+= 1
-    
+
 
   end
 

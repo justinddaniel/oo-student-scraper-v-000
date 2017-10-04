@@ -25,7 +25,7 @@ class Scraper
     x = sitesarray.length
     sarray = Array.new(x, " ")
     i = 0
-    sarray.collect do |hash|
+    sarray.collect do |hash| #returns modified array. Original array sarray not modified. 
       hash = Hash.new
       hash[:name] = namesarray[i]
       hash[:location] = locationsarray[i]

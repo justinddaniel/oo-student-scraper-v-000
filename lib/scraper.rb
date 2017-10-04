@@ -40,12 +40,20 @@ class Scraper
     doc = Nokogiri::HTML(html)
     # attributes needed: twitter url, linkedin url, github url, blog url, profile quote, and bio.
     shash = {}
-    shash[:twitter] = doc.css(".social-icon-container a").first.attributes.first[1].value
-    shash[:linkedin] = doc.css(".social-icon-container a")[1].attributes.first[1].value
-    shash[:github] = doc.css(".social-icon-container a")[2].attributes.first[1].value
-    shash[:blog] = doc.css(".social-icon-container a")[3].attributes.first[1].value
-    shash[:profile_quote] = doc.css("div.profile-quote").text
-    shash[:bio] = doc.css("p").text
+    links = profile_page.css(".social-icon-container").children.css("a").map { |el| el.attribute('href').value}
+    links.each do |link|
+      if link.include?("linkedin")
+        shash[:linkedin] = link
+      elsif link.include?("github")
+        shash[:github] = link
+      elsif link.include?("twitter")
+        shash[:twitter] = link
+      else
+        shash[:blog] = link
+      end
+    end
+    shash[:profile_quote] = doc.css("div.profile-quote").text if doc.css("div.profile-quote")
+    shash[:bio] = doc.css("p").text if doc.css("p")
     shash
   end
 

@@ -26,14 +26,14 @@ class Scraper
     sarray = Array.new(x, " ")
     i = 0
     binding.pry
-    
+
     #sarray.each do |hash|
       #hash = Hash.new
       #hash[:name] = namesarray[i]
       #hash[:location] = locationsarray[i]
       #hash[:profile_url] = sitesarray[i]
       #i += 1
-    end
+    #end
 
     sarray
   end

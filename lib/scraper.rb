@@ -22,6 +22,7 @@ class Scraper
     ssites.each do |s|
       sitesarray << s.attributes.first[1].value
     end
+    binding.pry
     x = sitesarray.length
     sarray = Array.new(x, {})
     i = 0
@@ -30,7 +31,6 @@ class Scraper
       hash[:location] = locationsarray[i]
       hash[:profile_url] = sitesarray[i]
       i += 1
-      binding.pry
     end
     sarray
   end

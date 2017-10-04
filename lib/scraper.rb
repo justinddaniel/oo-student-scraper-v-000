@@ -12,8 +12,6 @@ class Scraper
     snames.each do |a|
       namesarray << a.text
     end
-    binding.pry
-
 
   end
 

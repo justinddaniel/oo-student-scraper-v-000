@@ -19,7 +19,7 @@ class Scraper
     end
     ssites = doc.css(".student-card a")
     ssitesstring = ssites.to_s
-    
+
 
   end
 

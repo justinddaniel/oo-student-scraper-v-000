@@ -13,7 +13,7 @@ class Scraper
       namesarray << a.text
     end
     binding.pry
-    
+
 
   end
 
